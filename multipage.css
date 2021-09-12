@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:sans-serif;
+    outline: none;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: linear-gradient(to right,#402639,#242b42,#402639);
+}
+.container{
+    width: 350px;
+    background:rgba(237, 238, 237, 0.486);
+    /* border: 1px solid white; */
+   
+    text-align: center;
+    padding: 50px 35px 10px 35px;
+}
+.container .from_outer{
+    width: 100%;
+    /* overflow: hidden; */
+    
+}
+.from_outer form{
+    display: flex;
+    width: 600%;
+    height: auto;
+    
+}
+.from_outer form .page{
+    width: 25%;
+}
+/* .field{
+    display: inline-block;
+} */
+.from_outer form .page .title{
+    text-align: left;
+    font-size: 25px;
+    font-weight: 500;
+}
+.from_outer form .page .field{
+    height: 45px;
+    width: 330px;
+    margin: 45px 0;
+    text-align: left;
+    color: lightyellow;
+    /* display: flex;
+    position: relative;
+     */
+}
+
+.from_outer form .page .field .label{
+   
+   
+    font-weight: 500;
+    color: white;
+    
+    
+   
+}
+.from_outer form .page .field input{
+height: 100%;
+width: 100%;
+background-color: transparent;
+
+
+/* border-bottom: 1px solid; */
+/* border-radius: 5px; */
+font-size: 18px;
+padding-left: 15px;
+}
+form .page .field select{
+    width: 100%;
+    padding-left: 10px;
+    font-size: 17px;
+    font-weight: 500;
+    /* border: none; */
+    background: transparent;
+}
+
+
+.from_outer form .page .field button{
+    width: 100%;
+    height: calc(100% + 5px);
+    margin-top: -20px;
+    border: none;
+    background: mediumaquamarine;
+    border-radius: 5px;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.from_outer form .page .field button:hover{
+    background: rgb(152, 209, 19);
+}
+.from_outer form .page .btns button{
+    margin-top: -20px!important;
+}
+form .page .btns button .prev{
+    margin-right: 3px;
+    font-size: 17px;
+}
+form .page .btns button .next{
+    margin-left: 3px;
+}
