@@ -13,7 +13,7 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    overflow: hidden;
+    /* overflow: hidden; */
     
     background-image: linear-gradient(to right,#402639,#242b42,#402639);
 }
@@ -73,8 +73,24 @@ border-radius: 5px;
 font-size: 18px;
 padding-left: 15px;
 box-sizing: border-box;
+border: 1px solid rgba(255, 255, 255, 0.616);
+}
+::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 2px;
+    opacity: 1;
+    filter: invert(1);    
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
+input[type=number] {
+  -moz-appearance: textfield;
+}
 form .page .field select{
     height: 100%;
     width: 100%;
@@ -85,6 +101,7 @@ form .page .field select{
     font-size: 18px;
     padding-left: 15px;
     box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.616);
 }
 
 form .page .field select option{
@@ -123,9 +140,9 @@ form .page .field select option{
 
 }
 
-h3{
+p{
     position: absolute;
-    font-size: 80px;
+    font-size: 90px;
     color: rgba(255, 254, 254, 0.068);
     pointer-events: none;
 }
