@@ -39,7 +39,7 @@ body{
 }
 .from_outer form .page{
     width: 25%;
-    
+    transition: margin-left 0.3s ease-in-out;
 }
 
 .from_outer form .page .title{
@@ -117,10 +117,7 @@ form .page .field select option{
     box-sizing: border-box;
     background: transparent;
 }
-form .page .field select option{
-    color: black;
-   
-}
+
 
 .from_outer form .page .field button{
     width: 100%;
@@ -176,6 +173,10 @@ form .page .field select option{
     font-weight: 500;
     color: white;
     margin-bottom: 8px;
+    transition: 0.2s;
+}
+.progress_bar .step p.active{
+    color:rgb(18, 228, 228);
 }
 .progress_bar .step .bullet{
     position: relative;
@@ -185,7 +186,7 @@ form .page .field select option{
     display: inline-block;
     border-radius: 50%;
     color: white;
-    
+    transform: 0.2s;
 }
 .progress_bar .step:last-child .bullet::before,
 .progress_bar .step:last-child .bullet::after{
@@ -201,11 +202,16 @@ form .page .field select option{
     width: 44px;
     background: white;
 }
-.progress_bar .step .bullet::after{
+.progress_bar .step .bullet.active::after{
     background-color:rgb(18, 228, 228);
     transform: scaleX(0);
     transform-origin: left;
     animation: animate 0.3s linear forwards;
+}
+.progress_bar .step .bullet.active{
+    border-color: rgb(18, 228, 228);
+    background: rgb(18, 228, 228);
+    color: black;
 }
 @keyframes animate{
     100%{
@@ -213,13 +219,16 @@ form .page .field select option{
     }
 
 }
-.progress_bar .step span{
+.progress_bar .step .bullet span{
     font-weight: 500;
     font-size: 17px;
     line-height: 25px;
     position: absolute;
     left: 50%;
     transform: translate(-50%);
+}
+.progress_bar .step .bullet.active span{
+    display: none;
 }
 .progress_bar .step .check{
     position: absolute;
@@ -228,4 +237,8 @@ form .page .field select option{
     font-size: 15px;
     transform: translate(-50%, -50%);
     display: none;
+}
+.progress_bar .step .check.active{
+    display: block;
+    color: #fff;
 }
