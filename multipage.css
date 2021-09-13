@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -12,7 +13,7 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    overflow: hidden;
+    /* overflow: hidden; */
     
     background-image: linear-gradient(to right,#402639,#242b42,#402639);
 }
@@ -26,7 +27,7 @@ body{
 }
 .container .from_outer{
     width: 100%;
-
+    /* overflow: hidden; */
     
 }
 .from_outer form{
@@ -57,43 +58,61 @@ body{
 }
 
 .from_outer form .page .field .label{
-   
     position: absolute;
     font-weight: 500;
     color: white;
-    font-size: 8px !important;
-    top: -30%;
-    
-    
-   
+    top: -30%; 
 }
 .from_outer form .page .field input{
 height: 100%;
 width: 100%;
-background-color: transparent;
+background-color: rgba(255, 255, 255, 0.103);
 outline: none;
 color: white;
 border-radius: 5px;
 font-size: 18px;
 padding-left: 15px;
 box-sizing: border-box;
+border: 1px solid rgba(255, 255, 255, 0.616);
+}
+::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 2px;
+    opacity: 1;
+    filter: invert(1);    
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
+input[type=number] {
+  -moz-appearance: textfield;
+}
 form .page .field select{
+    height: 100%;
     width: 100%;
-    padding-left: 10px;
-    font-size: 17px;
-    font-weight: 500;
-
-    background: transparent;
+    background-color: rgba(255, 255, 255, 0.103);
+    outline: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.616);
 }
 
+form .page .field select option{
+    color: rgb(0, 0, 0);
+}
 
 .from_outer form .page .field button{
     width: 100%;
     height: calc(100% + 5px);
     border: none;
-    background: rgb(110, 194, 138);
+    background: rgb(255, 255, 255);
     border-radius: 5px;
     color: black;
     font-size: 18px;
@@ -104,24 +123,26 @@ form .page .field select{
     transition: 0.3s ease;
 }
 .from_outer form .page .field button:hover{
-    background: rgb(24, 141, 63);
+    background: rgb(77, 7, 45);
     color: white;
     font-weight: 600;
 } 
-.from_outer form .page .btns button{
-    margin-top: -20px!important;
+.from_outer form .page .btns{
+    display: flex;
+    justify-content: space-between;
 }
-form .page .btns button .prev{
+.from_outer form .page .btns .prev {
     margin-right: 3px;
     font-size: 17px;
 }
- form .page .btns button .next{
+.from_outer form .page .btns .next {
     margin-left: 3px;
+
 }
 
-h3{
+p{
     position: absolute;
-    font-size: 80px;
+    font-size: 90px;
     color: rgba(255, 254, 254, 0.068);
     pointer-events: none;
 }
