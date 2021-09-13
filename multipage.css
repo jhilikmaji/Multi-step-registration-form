@@ -23,11 +23,16 @@ body{
     padding: 50px 35px 10px 35px;
     border-radius: 5px;
     text-align: center;
+   
 
 }
 .container .from_outer{
     width: 100%;
+<<<<<<< Updated upstream
     /* overflow: hidden; */
+=======
+overflow: hidden;
+>>>>>>> Stashed changes
     
 }
 .from_outer form{
@@ -52,6 +57,7 @@ body{
     width: 330px;
     margin: 45px 0;
     color: lightyellow;
+    /* display: flex; */
     position: relative;
     
 
@@ -94,11 +100,20 @@ input[type=number] {
 form .page .field select{
     height: 100%;
     width: 100%;
+<<<<<<< Updated upstream
     background-color: rgba(255, 255, 255, 0.103);
+=======
+    height: 100%;
+    padding-left: 10px;
+    font-size: 17px;
+    font-weight: 500;
+   
+>>>>>>> Stashed changes
     outline: none;
     color: white;
     border-radius: 5px;
     font-size: 18px;
+<<<<<<< Updated upstream
     padding-left: 15px;
     box-sizing: border-box;
     border: 1px solid rgba(255, 255, 255, 0.616);
@@ -106,6 +121,14 @@ form .page .field select{
 
 form .page .field select option{
     color: rgb(0, 0, 0);
+=======
+    box-sizing: border-box;
+    background: transparent;
+}
+form .page .field select option{
+    color: black;
+   
+>>>>>>> Stashed changes
 }
 
 .from_outer form .page .field button{
