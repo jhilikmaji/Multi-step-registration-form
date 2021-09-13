@@ -28,11 +28,8 @@ body{
 }
 .container .from_outer{
     width: 100%;
-<<<<<<< Updated upstream
-    /* overflow: hidden; */
-=======
-overflow: hidden;
->>>>>>> Stashed changes
+    overflow: hidden;
+
     
 }
 .from_outer form{
@@ -49,13 +46,13 @@ overflow: hidden;
     text-align: left;
     font-size: 30px;
     font-weight: 600;
-    margin-bottom: -30px;
+    /* margin-bottom: -30px; */
     color: rgba(255, 255, 255, 0.74);
 }
 .from_outer form .page .field{
     height: 45px;
     width: 330px;
-    margin: 45px 0;
+    margin: 25px 0;
     color: lightyellow;
     /* display: flex; */
     position: relative;
@@ -70,13 +67,13 @@ overflow: hidden;
     top: -30%; 
 }
 .from_outer form .page .field input{
-height: 100%;
+height: 70%;
 width: 100%;
 background-color: rgba(255, 255, 255, 0.103);
 outline: none;
 color: white;
 border-radius: 5px;
-font-size: 18px;
+font-size: 15px;
 padding-left: 15px;
 box-sizing: border-box;
 border: 1px solid rgba(255, 255, 255, 0.616);
@@ -98,22 +95,18 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 form .page .field select{
-    height: 100%;
+    height: 70%;
     width: 100%;
-<<<<<<< Updated upstream
     background-color: rgba(255, 255, 255, 0.103);
-=======
-    height: 100%;
+    
     padding-left: 10px;
-    font-size: 17px;
-    font-weight: 500;
+    font-size: 15px;
+    /* font-weight: 500; */
    
->>>>>>> Stashed changes
     outline: none;
     color: white;
     border-radius: 5px;
     font-size: 18px;
-<<<<<<< Updated upstream
     padding-left: 15px;
     box-sizing: border-box;
     border: 1px solid rgba(255, 255, 255, 0.616);
@@ -121,14 +114,12 @@ form .page .field select{
 
 form .page .field select option{
     color: rgb(0, 0, 0);
-=======
     box-sizing: border-box;
     background: transparent;
 }
 form .page .field select option{
     color: black;
    
->>>>>>> Stashed changes
 }
 
 .from_outer form .page .field button{
@@ -163,9 +154,78 @@ form .page .field select option{
 
 }
 
-p{
+.reg{
     position: absolute;
     font-size: 90px;
     color: rgba(255, 254, 254, 0.068);
     pointer-events: none;
+    letter-spacing: 11px;
+}
+.container .progress_bar{
+    display: flex;
+    margin: 10px 0;
+}
+.container .progress_bar .step{
+    position: relative;
+    text-align: center;
+    width: 100%;
+
+}
+.progress_bar .step p{
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 8px;
+}
+.progress_bar .step .bullet{
+    position: relative;
+    height: 25px;
+    width: 25px;
+    border: 2px solid white;
+    display: inline-block;
+    border-radius: 50%;
+    color: white;
+    
+}
+.progress_bar .step:last-child .bullet::before,
+.progress_bar .step:last-child .bullet::after{
+    display: none;
+}
+.progress_bar .step .bullet::before,
+.progress_bar .step .bullet::after{
+    position: absolute;
+    content: '';
+    bottom: 11px;
+    right: -51px;
+    height: 3px;
+    width: 44px;
+    background: white;
+}
+.progress_bar .step .bullet::after{
+    background-color:rgb(18, 228, 228);
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 0.3s linear forwards;
+}
+@keyframes animate{
+    100%{
+        transform: scaleX(1);
+    }
+
+}
+.progress_bar .step span{
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 25px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+.progress_bar .step .check{
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    font-size: 15px;
+    transform: translate(-50%, -50%);
+    display: none;
 }
