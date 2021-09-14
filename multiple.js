@@ -93,18 +93,18 @@ $(function(){
     //name validation
     $("#name").focusout(function(){check_name();});
     function check_name(){
-        var pattern=/^[a-zA-Z]*$/;
+        var pattern=/^[a-zA-Z]{3,}$/;
         var name= $("#name").val();
-        if(name!=='')
+        if(name!=='' )
         {
             if(pattern.test(name)){
                 $("#name_error_message").hide();
                 $('#name').css("border","2px solid  #99ff99");
             }
             else{
-                $("#name_error_message").html("Should contained only characters");
+                $("#name_error_message").html("Should contained atleast 3 characters");
                 $("#name_error_message").show();
-                $('#name').css("border","2px solid rgb(133, 0, 0)");
+                $('#name').css("border","2px solid rgb(253, 29, 29)");
                 error_name=true;
             }
         }
@@ -112,7 +112,7 @@ $(function(){
         {
             $("#name_error_message").html("This field must be filled");
             $("#name_error_message").show();
-            $('#name').css("border","2px solid rgb(133, 0, 0)");
+            $('#name').css("border","2px solid rgb(253, 29, 29)");
             error_name=true;
         }
         
@@ -131,7 +131,7 @@ function check_date(){
     else{
         $("#date_error_message").html("This field must be filled");
         $("#date_error_message").show();
-        $('#date').css("border","2px solid rgb(133, 0, 0)");
+        $('#date').css("border","2px solid rgb(253, 29, 29)");
         error_date=true;
     }
 }
@@ -148,7 +148,7 @@ function check_gender(){
     {
         $("#gender_error_message").html("This field must be filled");
         $("#gender_error_message").show();
-        $('#gender').css("border","2px solid rgb(133, 0, 0)");
+        $('#gender').css("border","2px solid rgb(253, 29, 29)");
         error_gender=true;
     
     }
@@ -171,7 +171,7 @@ function check_phone(){
     else{
         $("#phone_error_message").html("This field must be filled");
         $("#phone_error_message").show();
-        $('#phone').css("border","2px solid rgb(133, 0, 0)");
+        $('#phone').css("border","2px solid rgb(253, 29, 29)");
         error_phone=true;
     
     }
@@ -189,7 +189,7 @@ function check_email(){
     else{
         $("#email_error_message").html("This field must be filled");
         $("#email_error_message").show();
-        $('#email').css("border","2px solid rgb(133, 0, 0)");
+        $('#email').css("border","2px solid rgb(253, 29, 29)");
         error_email=true;
     }
 }
