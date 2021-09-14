@@ -117,81 +117,84 @@ $(function(){
         }
         
     }
+
+    //date validation
+    $("#date").focusout(function(){check_date();});
+    function check_date(){
+        var date=$("#date").val();
+        if(date!='')
+        {
+            $("#date_error_message").hide();
+            $('#date').css("border","2px solid  #99ff99");
+        }
+        else{
+            $("#date_error_message").html("This field must be filled");
+            $("#date_error_message").show();
+            $('#date').css("border","2px solid rgb(253, 29, 29)");
+            error_date = true;
+        }
+    }
+
+    //gender validation
+    $("#gender").focusout(function(){check_gender();});
+    function check_gender(){
+        var gender=$("#gender").val();
+        //var option=$("#option1").val();
+        var second=$("#option2").val();
+        var third=$("#option3").val();
+        var fourth=$("#option4").val();
+        if((gender!=second)&&(gender!=third)&&(gender!=fourth))
+        {
+            $("#gender_error_message").html("This field must be filled");
+            $("#gender_error_message").show();
+            $('#gender').css("border","2px solid rgb(253, 29, 29)");
+            error_gender =true;
+        
+        }
+        else{
+            $("#gender_error_message").hide();
+            $('#gender').css("border","2px solid  #99ff99");
+        
+        }
+    }
+
+    //contact no validation
+    $("#phone").focusout(function(){check_phone();});
+    function check_phone(){
+        var phone=$("#phone").val();
+        if(phone!='')
+        {
+            $("#phone_error_message").hide();
+            $('#phone').css("border","2px solid  #99ff99");
+        }
+        else{
+            $("#phone_error_message").html("This field must be filled");
+            $("#phone_error_message").show();
+            $('#phone').css("border","2px solid rgb(253, 29, 29)");
+            error_phone=true;
+        
+        }
+    }
+
+    //email validaton
+    $("#email").focusout(function(){check_email();});
+    function check_email(){
+        var email=$("#email").val();
+        if(email!='')
+        {
+            $("#email_error_message").hide();
+            $('#email').css("border","2px solid  #99ff99");
+        }
+        else{
+            $("#email_error_message").html("This field must be filled");
+            $("#email_error_message").show();
+            $('#email').css("border","2px solid rgb(253, 29, 29)");
+            error_email=true;
+        }
+    }
+    
 });
 
-//date validation
-$("#date").focusout(function(){check_date();});
-function check_date(){
-    var date=$("#date").val();
-    if(date!='')
-    {
-        $("#date_error_message").hide();
-        $('#date').css("border","2px solid  #99ff99");
-    }
-    else{
-        $("#date_error_message").html("This field must be filled");
-        $("#date_error_message").show();
-        $('#date').css("border","2px solid rgb(253, 29, 29)");
-        error_date=true;
-    }
-}
 
-//gender validation
-$("#gender").focusout(function(){check_gender();});
-function check_gender(){
-    var gender=$("#gender").val();
-    //var option=$("#option1").val();
-    var second=$("#option2").val();
-    var third=$("#option3").val();
-    var fourth=$("#option4").val();
-    if((gender!=second)&&(gender!=third)&&(gender!=fourth))
-    {
-        $("#gender_error_message").html("This field must be filled");
-        $("#gender_error_message").show();
-        $('#gender').css("border","2px solid rgb(253, 29, 29)");
-        error_gender=true;
-    
-    }
-    else{
-        $("#gender_error_message").hide();
-        $('#gender').css("border","2px solid  #99ff99");
-       
-    }
-}
-
-//contact no validation
-$("#phone").focusout(function(){check_phone();});
-function check_phone(){
-    var phone=$("#phone").val();
-    if(phone!='')
-    {
-        $("#phone_error_message").hide();
-        $('#phone').css("border","2px solid  #99ff99");
-    }
-    else{
-        $("#phone_error_message").html("This field must be filled");
-        $("#phone_error_message").show();
-        $('#phone').css("border","2px solid rgb(253, 29, 29)");
-        error_phone=true;
-    
-    }
-}
-
-//email validaton
-$("#email").focusout(function(){check_email();});
-function check_email(){
-    var email=$("#email").val();
-    if(email!='')
-    {
-        $("#email_error_message").hide();
-        $('#email').css("border","2px solid  #99ff99");
-    }
-    else{
-        $("#email_error_message").html("This field must be filled");
-        $("#email_error_message").show();
-        $('#email').css("border","2px solid rgb(253, 29, 29)");
-        error_email=true;
-    }
-}
 
 
