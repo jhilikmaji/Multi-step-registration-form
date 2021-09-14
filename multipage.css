@@ -20,7 +20,7 @@ body{
 .container{
     width: 330px;
     background:rgba(255, 255, 255, 0.089);
-    padding: 50px 35px 10px 35px;
+    padding: 20px 20px 10px 20px;
     border-radius: 5px;
     text-align: center;
    
@@ -52,7 +52,7 @@ body{
 .from_outer form .page .field{
     height: 45px;
     width: 330px;
-    margin: 25px 0;
+    margin-bottom: 30px ;
     color: lightyellow;
     /* display: flex; */
     position: relative;
@@ -77,6 +77,7 @@ font-size: 15px;
 padding-left: 15px;
 box-sizing: border-box;
 border: 1px solid rgba(255, 255, 255, 0.616);
+margin-bottom: 3px;
 }
 ::-webkit-calendar-picker-indicator {
     cursor: pointer;

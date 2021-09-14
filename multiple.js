@@ -60,10 +60,10 @@ prevBtnSec.addEventListener("click", function(){
 prevBtnThird.addEventListener("click", function(){
     slidePage.style.marginLeft="-25%";
     
-    bullet[current-2].classList.removed("active");
+    bullet[current-2].classList.remove("active");
     progressText[current-2].classList.remove("active");
 
-    progressCheck[current-2].classList.removed("active");
+    progressCheck[current-2].classList.remove("active");
     current-=1;
 });
 prevBtnFourth.addEventListener("click", function(){
@@ -75,3 +75,5 @@ prevBtnFourth.addEventListener("click", function(){
     progressCheck[current-2].classList.remove("active");
     current-=1;
 });
+
+
