@@ -243,3 +243,9 @@ form .page .field select option{
     display: block;
     color: #fff;
 }
+.error_form{
+    font-size: 15px;
+    font-weight: 100;
+    color: rgb(133, 0, 0);
+    letter-spacing: 2px;
+}
